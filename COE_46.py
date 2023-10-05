@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime,timedelta
 
 def printStars(func):
     def preety_answer_printer():
@@ -29,8 +29,30 @@ def que2():
 
 @printStars
 def que3():
-    question = """Subtract a week (7 days)  from a given date in Python"""
+    question = """Q.3 Subtract a week (7 days)  from a given date in Python"""
     print(question)
+    try:
+        date_str = input("enter date in format of 'yyyy-mm-dd': ")
+        date = datetime.strptime(date_str,"%Y-%m-%d")
+        ans = date - timedelta(days=7)
+        print(f"7 days subtracted = {ans:%Y-%m-%d}")
+    except ValueError:
+        print("please only enter date in specified format")
+
+@printStars
+def que4():
+    question = """Q.4 Find the day of the week of a given date"""
+    print(question)
+    try:
+        date_str = input("enter date in format of 'yyyy-mm-dd': ")
+        date = datetime.strptime(date_str,"%Y-%m-%d")
+        dayOfTheWeek = date.strftime("%A")
+        print(f"It was {dayOfTheWeek} on {date:%Y-%m-%d}")
+    except ValueError:
+        print("please only enter date in specified format")
+
 
 que1()
 que2()
+que3()
+que4()
