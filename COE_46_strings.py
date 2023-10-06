@@ -1,6 +1,7 @@
 ## string exercise
 from helper import print_stars
 
+
 @print_stars
 def que1():
     question = """Q. Create a string made of the first, middle and last character"""
@@ -10,12 +11,12 @@ def que1():
     if n == 0:
         print("don't just hit enter,please enter an actual string")
         return
-    first, last = 0, n-1
+    first, last = 0, n - 1
     middle = (n // 2) - 1
     if n % 2 == 1:
         # handle odd number of characters in string
         middle += 1
-    
+
     ans = string[first] + string[middle] + string[last]
     print(f"the string after joining first,middle and last is = {ans}")
 
@@ -29,9 +30,10 @@ def que2():
     if n == 0:
         print("don't just hit enter,please enter an actual string")
         return
-    first, middle, last = 0, (n // 2),n
+    first, middle, last = 0, (n // 2), n
     ans = string[first] + string[middle] + string[last]
     print(f"the string after joining first,middle and last is = {ans}")
+
 
 if __name__ == "__main__":
     que1()

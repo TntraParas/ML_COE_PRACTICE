@@ -1,15 +1,18 @@
 from typing import Callable
 
-def print_stars(func: Callable[[],None]) -> Callable[[],None]:
+
+def print_stars(func: Callable[[], None]) -> Callable[[], None]:
     """
-    It is function wrapper which will pritty print the function execution
+    It is function wrapper which will pretty print the function execution
     Input:
         func: a void function
     Returns:
         () -> None
     """
-    def preety_function_printer():
+
+    def pretty_function_printer():
         print("\n*******************\n")
         func()
         print("\n*******************\n")
-    return preety_function_printer
+
+    return pretty_function_printer
