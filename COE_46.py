@@ -1,13 +1,13 @@
 from datetime import datetime,timedelta
-from helper import printStars
+from helper import print_stars
 
-@printStars
+@print_stars
 def que1():
     question = """ Q.1 Print current date and time in Python"""
     print(question)
     print(datetime.now())
 
-@printStars
+@print_stars
 def que2():
     question = """Q.2 Convert string into date time object in python"""
     print(question)
@@ -21,7 +21,7 @@ def que2():
 
     print(f"string format = {date_str3} & datetime format = {datetime.strptime(date_str3,'%Y-%m-%d %H:%M:%S')}")
 
-@printStars
+@print_stars
 def que3():
     question = """Q.3 Subtract a week (7 days)  from a given date in Python"""
     print(question)
@@ -33,22 +33,20 @@ def que3():
     except ValueError:
         print("please only enter date in specified format")
 
-@printStars
+@print_stars
 def que4():
     question = """Q.4 Find the day of the week of a given date"""
     print(question)
     try:
         date_str = input("enter date in format of 'yyyy-mm-dd': ")
         date = datetime.strptime(date_str,"%Y-%m-%d")
-        dayOfTheWeek = date.strftime("%A")
-        print(f"It was {dayOfTheWeek} on {date:%Y-%m-%d}")
+        day_of_the_week = date.strftime("%A")
+        print(f"It was {day_of_the_week} on {date:%Y-%m-%d}")
     except ValueError:
         print("please only enter date in specified format")
 
-def dummy():
-    print("dummy")
-
-que1()
-que2()
-que3()
-que4()
+if __name__ == "__main__":
+    que1()
+    que2()
+    que3()
+    que4()

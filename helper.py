@@ -1,6 +1,6 @@
 from typing import Callable
 
-def printStars(func: Callable[[],None]) -> Callable[[],None]:
+def print_stars(func: Callable[[],None]) -> Callable[[],None]:
     """
     It is function wrapper which will pritty print the function execution
     Input:

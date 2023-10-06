@@ -1,10 +1,7 @@
 ## string exercise
-from COE_46 import dummy
-from helper import printStars
+from helper import print_stars
 
-dummy()
-
-@printStars
+@print_stars
 def que1():
     question = """Q. Create a string made of the first, middle and last character"""
     print(question)
@@ -23,7 +20,7 @@ def que1():
     print(f"the string after joining first,middle and last is = {ans}")
 
 
-@printStars
+@print_stars
 def que2():
     question = """Q. Create a string made of the middle three characters"""
     print(question)
@@ -36,4 +33,5 @@ def que2():
     ans = string[first] + string[middle] + string[last]
     print(f"the string after joining first,middle and last is = {ans}")
 
-que1()
+if __name__ == "__main__":
+    que1()
