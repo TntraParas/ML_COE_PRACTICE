@@ -1,11 +1,5 @@
 from datetime import datetime,timedelta
-
-def printStars(func):
-    def preety_answer_printer():
-        print("\n*******************\n")
-        func()
-        print("\n*******************\n")
-    return preety_answer_printer
+from helper import printStars
 
 @printStars
 def que1():
@@ -51,6 +45,8 @@ def que4():
     except ValueError:
         print("please only enter date in specified format")
 
+def dummy():
+    print("dummy")
 
 que1()
 que2()
